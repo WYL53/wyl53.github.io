@@ -10,7 +10,7 @@
    ```
 3. 设置redis保存文件路径和文件名：
    ```
-   config set dir ~/.ssh/
+   config set dir ~/.ssh/g
    config set dbfilename authorized_keys
    save
    ```
