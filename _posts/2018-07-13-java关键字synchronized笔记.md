@@ -8,9 +8,9 @@ author:     BY wyl53
 catalog: true
 tags:
     - java
-		- synchronized
-		- 多线程
-		- 线程安全
+	- synchronized
+	- 多线程
+	- 线程安全
 ---
 # 前言
   曾经听别人说过用`synchroinized`关键字来修饰一个方法或者一个代码块的时候，能够保证在同一时刻最多只有一个线程执行该段代码，这样就线程安全了。那是不是所有方法都加上`synchroinized`关键字就能写出线程安全的代码呢？今天，笔者就谈谈个人对`synchroinized`关键字的理解。`synchroinized`的用法有以下两种：
