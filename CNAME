@@ -1,1 +1,15 @@
 
+---
+layout:     post
+title:      java关键字synchronized的一些笔记
+# subtitle:   java web 请求拦截的方法
+date:       2018-07-06
+author:     BY wyl53
+# header-img: img/post-bg-ios9-web.jpg
+catalog: true
+tags:
+    - java
+	- synchronized
+	- 多线程
+	- 线程安全
+---
