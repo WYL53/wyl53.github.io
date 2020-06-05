@@ -1,18 +1,5 @@
----
-layout:     post
-title:      java关键字synchronized的一些笔记
-# subtitle:   java web 请求拦截的方法
-date:       2018-07-06
-author:     BY wyl53
-# header-img: img/post-bg-ios9-web.jpg
-catalog: true
-tags:
-    - java
-	- synchronized
-	- 多线程
-	- 线程安全
----
-# 前言
+# java语言synchronized知识点
+## 前言
   曾经听别人说过用`synchroinized`关键字来修饰一个方法或者一个代码块的时候，能够保证在同一时刻最多只有一个线程执行该段代码，这样就线程安全了。那是不是所有方法都加上`synchroinized`关键字就能写出线程安全的代码呢？今天，笔者就谈谈个人对`synchroinized`关键字的理解。`synchroinized`的用法有以下两种：
 
 ```
@@ -27,6 +14,7 @@ tags:
   }
 ```
 
+## 示例代码
 1. 当`synchronized`修饰非静态方法时，需要获取到`this`当前对象的锁，才能执行方法体。所以当多个线程同时访问同一个对象的`synchronized`方法时候，只有一个线程能获得执行方法的权力，其他线程会被阻塞住。持有锁的线程执行完方法后会自动释放锁，然后被。
 2. 当synchronized修饰静态方法时，需要获取到`this`当前对象的锁，才能执行方法体。
 ```
