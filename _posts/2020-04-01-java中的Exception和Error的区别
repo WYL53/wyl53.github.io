@@ -1,0 +1,24 @@
+---
+layout:     post
+title:      Exception和Error有什么区别？
+# subtitle:   
+date:       2021-04-01
+author:     BY wyl53
+# header-img: img/post-bg-ios9-web.jpg
+catalog: true
+tags:
+    - Java
+    - Exception
+    - Error
+---
+
+它们都是集成了 Throwable 类
+Exception是可以预测到的错误，并且程序有能力可以在这些错误中恢复的，如 IOException。
+
+Error是程序发生严重错误，导致程序无法运行的错误，如：OutOfMemoryError。
+
+Exception又分为可检查的异常和不可检查的异常。可检查的异常需要在代码里进行捕获处理，不可检查异常就是运行时错误，如NullPointerException，数组越界异常。
+
+处理Exception的时候不要直接用笼统的用Exception来捕获异常，应该要用具体的异常来捕获。如果笼统的用Exception就不能尽量多的显示异常错误信息。
+不要生吞异常，这样程序出现问题的时候，就会增加诊断问题的难度。
+生产环境中不要直接使用 e.printStackTrace(),这个方法是往错误输出设备去打印日志的，
